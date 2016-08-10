@@ -3,4 +3,5 @@
 ### Wszystko ma typ
 ### Aliasy
 ### Struktury
+### Pattern matching
 ### Klasy
