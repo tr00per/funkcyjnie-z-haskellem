@@ -5,3 +5,9 @@
 ### Struktury
 ### Pattern matching
 ### Klasy
+### Standardowe klasy
+#### Eq
+#### Ord
+#### Num
+#### Functor
+#### Applicative
