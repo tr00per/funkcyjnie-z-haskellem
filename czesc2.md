@@ -1,2 +1,2 @@
 # Funkcyjnie z Haskellem
-## Część 2: Zabawa typami
+## Część 2: Zabawa typami danych
