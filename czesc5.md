@@ -1,2 +1,4 @@
-# Część 5
-
+# Funkcyjnie z Haskellem
+## Część 5: Zaawansowane techniki
+### Soczewki
+### Template Haskell
