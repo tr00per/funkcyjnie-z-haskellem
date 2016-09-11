@@ -76,11 +76,14 @@ Wartość zwracana przez funkcję jest tożsama z ostatnią wartością do tej f
 
 Funkcje z parametrami wyglądają następująco
 ```haskell
+dodaj5 :: Int -> Int
+dodaj5 x = 5 + x
+
 dodaj :: Int -> Int -> Int
 dodaj x y = x + y
-
-
 ```
+
+...
 
 ### Rekurencja
 ### Listy
