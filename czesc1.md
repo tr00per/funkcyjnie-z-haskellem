@@ -72,6 +72,16 @@ Funkcja nazywa się `main`, nie przyjmuje żadnych parametrów. Ciało funkcji z
 
 Funkcja, która ma efektu uboczny można wywoływać inne funkcje z efektami ubocznymi. Nazywamy je akcjami, w przeciwieństwie do czystych funkcji, które nie mogą zawierać efektów ubocznych. Jest to wymuszone na poziomie typów. Można to skojarzyć z tym, jak wyjątek w Javie propaguje się w górę stosu wywołania. To podobny mechanizm, ale jakby ktoś zrobił go dobrze. `IO` jest najbardziej liberalnym oznaczeniem efektów ubocznych, to kontakt ze światem zewnętrznym. Są inne przydatne efekty uboczne, które nie są tak niebezpieczne i zostały zamknięte w "mniejszych" zakresach. Z tematem tym bezpośrednio wiążą się monady, których opowiem w późniejszych częściach.
 
+Wartość zwracana przez funkcję jest tożsama z ostatnią wartością do tej funkcji zwróconą, w tym wypadku `putStrLn "Hello, world!"` jest typu `IO ()`, więc `main` również jest takiego typu. Ale tak naprawdę to `main` ma narzucony typ przez specyfikację, więc musimy trafić z naszym kodem w ten wzorzec.
+
+Funkcje z parametrami wyglądają następująco
+```haskell
+dodaj :: Int -> Int -> Int
+dodaj x y = x + y
+
+
+```
+
 ### Rekurencja
 ### Listy
 ### Mapowanie
