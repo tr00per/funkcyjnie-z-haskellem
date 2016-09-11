@@ -6,3 +6,6 @@
 #### Lista
 #### Reader
 #### State
+### Kilka efektów na raz
+#### Monad Transformers
+#### Rozszerzalne efekty
