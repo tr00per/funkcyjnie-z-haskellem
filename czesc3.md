@@ -7,5 +7,5 @@
 #### Reader
 #### State
 ### Kilka efektów na raz
-#### Monad Transformers
+#### Transformatory
 #### Rozszerzalne efekty
