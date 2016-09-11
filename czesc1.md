@@ -8,7 +8,7 @@ Jeśli ktoś studiował informatykę, to mógł tak jak ja odnieść wrażenie, 
 W programowaniu funkcyjnym można też naprawdę wdrożyć konpcepcje kładzone nam do głowy przez Wujka Boba. Weźmy "nie powtarzaj się". Ile razy pisaliście ten sam fragment kodu? `for (int i = 0; i < koszyk.zakupy.length; ++i)`? Tak, można to inaczej zapisać, bo mamy iteratory, cukier składniowy itp. Ale wciąż są te fragmenty, który wciąż się powtarzają. Ten punkt łączy się z kolejnym - "separacją trosk". Wujek mówił, żeby ciało metody, która możę wygenerować wyjątek wydzielić od obsługi wyjątku. Lub wydzielić ciało z warunku. Lub właśnie z pętli. Programowanie funkcyjne daje nam lepsze narzędzia do tego, by konstruować czysty kod.
 
 ### Dlaczego Haskell?
-Zainteresowałem się Haskellem, bo jest inny. Dlaczego Ty możesz zainteresować się Haskellem? Bo jest czysto funkcyjny - idealny do nauki, nie można pójść na skróty. Bo ma silne statyczne typowanie i wnioskowanie typów - każde wyrażenie ma konkretną sygnaturę, którą kompilator może wywnioskować samodzielnie. Wreszcie jest skalowalny - jeśli spodoba Ci się ten język, możesz kontynuować jego używanie.
+Zainteresowałem się Haskellem, bo jest inny. Dlaczego Ty możesz zainteresować się Haskellem? Bo jest czysto funkcyjny - idealny do nauki, nie można pójść na skróty i trzeba nauczyć się, czym jest efekt uboczny. Bo ma silne statyczne typowanie i wnioskowanie typów - każde wyrażenie ma konkretną sygnaturę, którą kompilator może wywnioskować samodzielnie. Wreszcie jest skalowalny - jeśli spodoba Ci się ten język, możesz kontynuować jego używanie.
 
 Jednym z założeń Haskella było, by nie tylko stanowił poligon doświadczalny dla naukowców badających języki programowania, ale żeby dało się w nim tworzyć rozwiązania produkcyjne. Używa go np. Facebook. Ponoć można go też spotkać w bankach, gdzie poprawność rozwiązania warto udowodnić formalnie, ale o tym słyszałem tylko pogłoski, bo żaden bank publicznie swojego kodu nie udostępnia.
 
@@ -68,7 +68,7 @@ main = putStrLn "Hello, world!"
 ```
 Tylko druga z tych linii jest konieczna, nagłowek typu mógł zostać wywnioskowany przez kompilator. W dobrym tonie jest jednak dać jawne typy wszystkim funkcjom o globalnej widoczności. Globalnej w zakresie modułu, o modułach opowiemy kiedy indziej.
 
-Funkcja nazywa się `main`, nie przyjmuje żadnych parametrów. Ciało funkcji znajduje się po prawej stronie znaku równości. W typ wypadku korzystamy z bibliotecznej funkcji `putStrLn :: String -> IO ()`. Funkcja ta przyjmie ciąg znaków i wzróci `()`, czyli "unit" albo "nic ciekawego", ale typ mówi nam, że będzie miał miejsce efekt uboczny.
+Funkcja nazywa się `main`, nie przyjmuje żadnych parametrów. Ciało funkcji znajduje się po prawej stronie znaku równości. W typ wypadku korzystamy z bibliotecznej funkcji `putStrLn :: String -> IO ()`. Funkcja ta przyjmie ciąg znaków i wzróci `()`, czyli "unit" albo "nic ciekawego", ale typ mówi nam, że będzie miał miejsce efekt uboczny. W tym wypadku - wyświetlenie zadanego ciągu znaków na ekranie.
 
 ### Rekurencja
 ### Listy
