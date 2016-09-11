@@ -1,7 +1,8 @@
 # Funkcyjnie z Haskellem
-## Część 2: Zabawa typami danych
-### Wszystko ma typ
-### Aliasy
+## Część 2: Lambda i zabawa typami danych
+### Lambda
+### Currying i częściowa aplikacja
+### Aliasy typów
 ### Struktury
 ### Pattern matching
 ### Klasy
