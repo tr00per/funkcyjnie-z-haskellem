@@ -66,9 +66,11 @@ Hello world
 main :: IO ()
 main = putStrLn "Hello, world!"
 ```
-Tylko druga z tych linii jest konieczna, nagłowek typu mógł zostać wywnioskowany przez kompilator. W dobrym tonie jest jednak dać jawne typy wszystkim funkcjom o globalnej widoczności. Globalnej w zakresie modułu, o modułach opowiemy kiedy indziej.
+Tylko druga z tych linii jest konieczna, nagłowek typu mógł zostać wywnioskowany przez kompilator. W dobrym tonie jest jednak dać jawne typy wszystkim funkcjom o globalnej widoczności. Globalnej w zakresie modułu, o modułach opowiem w późniejszych częściach.
 
 Funkcja nazywa się `main`, nie przyjmuje żadnych parametrów. Ciało funkcji znajduje się po prawej stronie znaku równości. W typ wypadku korzystamy z bibliotecznej funkcji `putStrLn :: String -> IO ()`. Funkcja ta przyjmie ciąg znaków i wzróci `()`, czyli "unit" albo "nic ciekawego", ale typ mówi nam, że będzie miał miejsce efekt uboczny. W tym wypadku - wyświetlenie zadanego ciągu znaków na ekranie.
+
+Funkcja, która ma efektu uboczny można wywoływać inne funkcje z efektami ubocznymi. Nazywamy je akcjami, w przeciwieństwie do czystych funkcji, które nie mogą zawierać efektów ubocznych. Jest to wymuszone na poziomie typów. Można to skojarzyć z tym, jak wyjątek w Javie propaguje się w górę stosu wywołania. To podobny mechanizm, ale jakby ktoś zrobił go dobrze. `IO` jest najbardziej liberalnym oznaczeniem efektów ubocznych, to kontakt ze światem zewnętrznym. Są inne przydatne efekty uboczne, które nie są tak niebezpieczne i zostały zamknięte w "mniejszych" zakresach. Z tematem tym bezpośrednio wiążą się monady, których opowiem w późniejszych częściach.
 
 ### Rekurencja
 ### Listy
